@@ -11,32 +11,41 @@ var number = ["0", "1", "2", "3", "4", "5", "6", "7", "8", "9"];
 var specialChar = ["!", "%", "&", ",", "*", "+", "-", ".", "/", "=", "<", ">", "?","~"];
 
 // Declaration of Variables
-var confirmLength = "";
-var confirmLowerCase;
-var confirmUpperCase;
-var confirmNumericCharacter;
-var confirmSpecialCharacter;
+var authenticateLength = "";
+var authenticateLowerCase;
+var authenticateUpperCase;
+var authenticateNumericCharacter;
+var authenticateSpecialCharacter;
 
 
 // Prompt to confirm character length
 function generatePassword() {
-  var confirmLength = (prompt("How many characters would you like your password to contain? Note: Password length must be between 8-128 characters"));
+  var authenticateLength = (prompt("How many characters would you like your password to contain? Note: Password length must be between 8-128 characters"));
 
   // Loop if answer is outside the parameters 
-  while(confirmLength <=  7|| confirmLength >= 129) {
+  while(authenticateLength <=  7|| authenticateLength >= 129) {
       alert("Password length must be between 8-128 characters Try again");
-      var confirmLength = (prompt("How many characters would you like your password to contain?"));
+      var authenticateLength = (prompt("How many characters would you like your password to contain?"));
       } 
 
       // Repeat back character length  
-      alert(`Your password will have ${confirmLength} characters`);
+      alert(`Your password will have ${authenticateLength} characters`);
 
-    // Determine parameters of password 
-    var confirmLowerCase = confirm("Click OK if you would like to include lowercase characters");
-    var confirmUpperCase = confirm("Click OK if you would like to include UPPERCASE CHARACTERS");
-    var confirmNumericCharacter = confirm("Click OK if you would like to include Numeric Characters"); 
-    var confirmSpecialCharacter = confirm("Click OK if you would like to include Special Characters");   
-    }
+  // Determine parameters of password 
+  var authenticateLowerCase = confirm("Click OK if you would like to include lowercase characters");
+  var authenticateUpperCase = confirm("Click OK if you would like to include UPPERCASE CHARACTERS");
+  var authenticateNumericCharacter = confirm("Click OK if you would like to include Numeric Characters"); 
+  var authenticateSpecialCharacter = confirm("Click OK if you would like to include Special Characters");
+      // Loop if answer is outside the parameters 
+      while(authenticateLowerCase === false && authenticateUpperCase === false && authenticateSpecialCharacter === false && authenticateNumericCharacter === false) {
+        alert("You must choose at least one parameter");
+        var authenticateLowerCase = confirm("Click OK if you would like to include lowercase characters");
+        var authenticateUpperCase = confirm("Click OK if you would like to include UPPERCASE CHARACTERS");
+        var authenticateNumericCharacter = confirm("Click OK if you would like to include Numeric Characters"); 
+        var authenticateSpecialCharacter = confirm("Click OK if you would like to include Special Characters");   
+    } 
+  
+
 
 // Write password to the #password input
 function writePassword() {
