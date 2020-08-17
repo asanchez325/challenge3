@@ -11,4 +11,4 @@ https://asanchez325.github.io/challenge3/
 ## Contribution 
 Made with ❤️  by Alannah 
 ## Preview
-![alt preview](assets/images/capture.jpg) 
+![alt preview](assets/images/Capture.PNG) 
