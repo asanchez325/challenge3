@@ -7,8 +7,8 @@ A website to generate a random password of user's desired length.
 *HTML
 *CSS
 ## Website 
-
+https://asanchez325.github.io/challenge3/
 ## Contribution 
 Made with ❤️  by Alannah 
 ## Preview
-![alt preview](assets/images/capture.jpeg) 
+![alt preview](assets/images/Capture.jpg) 
